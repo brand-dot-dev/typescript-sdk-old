@@ -62,11 +62,5 @@ export interface BrandRetrieveGet200ResponseBrandAddress {
      * @memberof BrandRetrieveGet200ResponseBrandAddress
      */
     'postal_code'?: string;
-    /**
-     * Additional address information
-     * @type {string}
-     * @memberof BrandRetrieveGet200ResponseBrandAddress
-     */
-    'additional_info'?: string;
 }
 

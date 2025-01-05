@@ -35,5 +35,11 @@ export interface BrandRetrieveGet200Response {
      * @memberof BrandRetrieveGet200Response
      */
     'brand'?: BrandRetrieveGet200ResponseBrand;
+    /**
+     * HTTP status code
+     * @type {number}
+     * @memberof BrandRetrieveGet200Response
+     */
+    'code'?: number;
 }
 

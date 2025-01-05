@@ -11,9 +11,11 @@ models/brand-retrieve-get200-response-brand-address.ts
 models/brand-retrieve-get200-response-brand-backdrops-inner-resolution.ts
 models/brand-retrieve-get200-response-brand-backdrops-inner.ts
 models/brand-retrieve-get200-response-brand-colors-inner.ts
+models/brand-retrieve-get200-response-brand-fonts-inner.ts
 models/brand-retrieve-get200-response-brand-logos-inner-resolution.ts
 models/brand-retrieve-get200-response-brand-logos-inner.ts
 models/brand-retrieve-get200-response-brand-socials-inner.ts
+models/brand-retrieve-get200-response-brand-stock.ts
 models/brand-retrieve-get200-response-brand.ts
 models/brand-retrieve-get200-response.ts
 models/brand-retrieve-get401-response.ts

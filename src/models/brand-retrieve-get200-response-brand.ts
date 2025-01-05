@@ -24,10 +24,16 @@ import type { BrandRetrieveGet200ResponseBrandBackdropsInner } from './brand-ret
 import type { BrandRetrieveGet200ResponseBrandColorsInner } from './brand-retrieve-get200-response-brand-colors-inner';
 // May contain unused imports in some cases
 // @ts-ignore
+import type { BrandRetrieveGet200ResponseBrandFontsInner } from './brand-retrieve-get200-response-brand-fonts-inner';
+// May contain unused imports in some cases
+// @ts-ignore
 import type { BrandRetrieveGet200ResponseBrandLogosInner } from './brand-retrieve-get200-response-brand-logos-inner';
 // May contain unused imports in some cases
 // @ts-ignore
 import type { BrandRetrieveGet200ResponseBrandSocialsInner } from './brand-retrieve-get200-response-brand-socials-inner';
+// May contain unused imports in some cases
+// @ts-ignore
+import type { BrandRetrieveGet200ResponseBrandStock } from './brand-retrieve-get200-response-brand-stock';
 
 /**
  * Detailed brand information
@@ -95,5 +101,17 @@ export interface BrandRetrieveGet200ResponseBrand {
      * @memberof BrandRetrieveGet200ResponseBrand
      */
     'verified'?: boolean;
+    /**
+     * 
+     * @type {BrandRetrieveGet200ResponseBrandStock}
+     * @memberof BrandRetrieveGet200ResponseBrand
+     */
+    'stock'?: BrandRetrieveGet200ResponseBrandStock;
+    /**
+     * An array of fonts used by the brand\'s website
+     * @type {Array<BrandRetrieveGet200ResponseBrandFontsInner>}
+     * @memberof BrandRetrieveGet200ResponseBrand
+     */
+    'fonts'?: Array<BrandRetrieveGet200ResponseBrandFontsInner>;
 }
 
