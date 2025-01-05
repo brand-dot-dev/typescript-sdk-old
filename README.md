@@ -234,6 +234,10 @@ Result will look like this:
 #### C. Classifying Brands by NAICS Code
 
 ```typescript
+import { BrandDevApi } from "@branddev/typescript-sdk";
+
+const brandDevApi = new BrandDevApi({ accessToken: "your_api_key_here" });
+
 async function getBrandNaics() {
   const brandNaics = await brandDevApi.brandNaicsGet({
     input: "gregorys coffee",
@@ -267,6 +271,10 @@ Result will look like this:
 #### D. Extracting Brand Data from Transactions
 
 ```typescript
+import { BrandDevApi } from "@branddev/typescript-sdk";
+
+const brandDevApi = new BrandDevApi({ accessToken: "your_api_key_here" });
+
 async function identifyBrandFromTransaction() {
   const brandTransactionIdentifier = await brandDevApi.brandTransactionIdentifierGet({
     transactionInfo: "GREGORYS COFFEE $9.99",
