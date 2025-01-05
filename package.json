@@ -1,6 +1,6 @@
 {
   "name": "@branddev/typescript-sdk",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Brand.dev API typescript SDK for fetching brand data such as logos, colors, backdrops, descriptions, social media links, etc...",
   "main": "dist/api.js",
   "types": "dist/api.d.ts",
