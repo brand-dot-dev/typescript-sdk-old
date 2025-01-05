@@ -10,5 +10,4 @@ export * from './brand-retrieve-get200-response-brand-logos-inner';
 export * from './brand-retrieve-get200-response-brand-logos-inner-resolution';
 export * from './brand-retrieve-get200-response-brand-socials-inner';
 export * from './brand-retrieve-get401-response';
-export * from './brand-search-get200-response';
-export * from './brand-search-get200-response-results-inner';
+export * from './brand-search-get200-response-inner';

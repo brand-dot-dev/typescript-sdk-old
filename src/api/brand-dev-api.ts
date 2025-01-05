@@ -28,7 +28,7 @@ import type { BrandRetrieveGet200Response } from '../models';
 // @ts-ignore
 import type { BrandRetrieveGet401Response } from '../models';
 // @ts-ignore
-import type { BrandSearchGet200Response } from '../models';
+import type { BrandSearchGet200ResponseInner } from '../models';
 /**
  * BrandDevApi - axios parameter creator
  * @export
@@ -242,7 +242,7 @@ export const BrandDevApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async brandSearchGet(query: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BrandSearchGet200Response>> {
+        async brandSearchGet(query: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<BrandSearchGet200ResponseInner>>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.brandSearchGet(query, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
             const localVarOperationServerBasePath = operationServerMap['BrandDevApi.brandSearchGet']?.[localVarOperationServerIndex]?.url;
@@ -298,7 +298,7 @@ export const BrandDevApiFactory = function (configuration?: Configuration, baseP
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        brandSearchGet(requestParameters: BrandDevApiBrandSearchGetRequest, options?: RawAxiosRequestConfig): AxiosPromise<BrandSearchGet200Response> {
+        brandSearchGet(requestParameters: BrandDevApiBrandSearchGetRequest, options?: RawAxiosRequestConfig): AxiosPromise<Array<BrandSearchGet200ResponseInner>> {
             return localVarFp.brandSearchGet(requestParameters.query, options).then((request) => request(axios, basePath));
         },
         /**

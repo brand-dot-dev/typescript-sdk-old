@@ -17,25 +17,25 @@
 /**
  * 
  * @export
- * @interface BrandSearchGet200ResponseResultsInner
+ * @interface BrandSearchGet200ResponseInner
  */
-export interface BrandSearchGet200ResponseResultsInner {
+export interface BrandSearchGet200ResponseInner {
     /**
      * URL of the brand\'s logo
      * @type {string}
-     * @memberof BrandSearchGet200ResponseResultsInner
+     * @memberof BrandSearchGet200ResponseInner
      */
     'logo'?: string;
     /**
      * Title or name of the brand
      * @type {string}
-     * @memberof BrandSearchGet200ResponseResultsInner
+     * @memberof BrandSearchGet200ResponseInner
      */
     'title'?: string;
     /**
      * Domain name of the brand
      * @type {string}
-     * @memberof BrandSearchGet200ResponseResultsInner
+     * @memberof BrandSearchGet200ResponseInner
      */
     'domain'?: string;
 }

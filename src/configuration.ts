@@ -14,7 +14,6 @@
 
 
 export interface ConfigurationParameters {
-    apiKey?: string | Promise<string> | ((name: string) => string) | ((name: string) => Promise<string>);
     username?: string;
     password?: string;
     accessToken?: string | Promise<string> | ((name?: string, scopes?: string[]) => string) | ((name?: string, scopes?: string[]) => Promise<string>);
@@ -25,12 +24,6 @@ export interface ConfigurationParameters {
 }
 
 export class Configuration {
-    /**
-     * parameter for apiKey security
-     * @param name security name
-     * @memberof Configuration
-     */
-    apiKey?: string | Promise<string> | ((name: string) => string) | ((name: string) => Promise<string>);
     /**
      * parameter for basic security
      *
@@ -83,7 +76,6 @@ export class Configuration {
     formDataCtor?: new () => any;
 
     constructor(param: ConfigurationParameters = {}) {
-        this.apiKey = param.apiKey;
         this.username = param.username;
         this.password = param.password;
         this.accessToken = param.accessToken;

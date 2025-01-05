@@ -17,6 +17,5 @@ models/brand-retrieve-get200-response-brand-socials-inner.ts
 models/brand-retrieve-get200-response-brand.ts
 models/brand-retrieve-get200-response.ts
 models/brand-retrieve-get401-response.ts
-models/brand-search-get200-response-results-inner.ts
-models/brand-search-get200-response.ts
+models/brand-search-get200-response-inner.ts
 models/index.ts
