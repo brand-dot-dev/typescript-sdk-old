@@ -1,0 +1,8 @@
+src/
+.git/
+.github/
+.gitignore
+.openapi-generator-ignore
+git_push.sh
+openapitools.json
+node_modules/ 

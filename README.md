@@ -1,2 +1,0 @@
-# node-sdk
-Node SDK
