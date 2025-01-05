@@ -30,10 +30,10 @@ import type { BrandRetrieveGet401Response } from '../models';
 // @ts-ignore
 import type { BrandSearchGet200Response } from '../models';
 /**
- * DefaultApi - axios parameter creator
+ * BrandDevApi - axios parameter creator
  * @export
  */
-export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
+export const BrandDevApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
          * Endpoint to classify any brand into a 2022 NAICS code.
@@ -203,11 +203,11 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 };
 
 /**
- * DefaultApi - functional programming interface
+ * BrandDevApi - functional programming interface
  * @export
  */
-export const DefaultApiFp = function(configuration?: Configuration) {
-    const localVarAxiosParamCreator = DefaultApiAxiosParamCreator(configuration)
+export const BrandDevApiFp = function(configuration?: Configuration) {
+    const localVarAxiosParamCreator = BrandDevApiAxiosParamCreator(configuration)
     return {
         /**
          * Endpoint to classify any brand into a 2022 NAICS code.
@@ -219,7 +219,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         async brandNaicsGet(input: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BrandNaicsGet200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.brandNaicsGet(input, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DefaultApi.brandNaicsGet']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BrandDevApi.brandNaicsGet']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -232,7 +232,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         async brandRetrieveGet(domain: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BrandRetrieveGet200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.brandRetrieveGet(domain, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DefaultApi.brandRetrieveGet']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BrandDevApi.brandRetrieveGet']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -245,7 +245,7 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         async brandSearchGet(query: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BrandSearchGet200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.brandSearchGet(query, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DefaultApi.brandSearchGet']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BrandDevApi.brandSearchGet']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
@@ -258,171 +258,171 @@ export const DefaultApiFp = function(configuration?: Configuration) {
         async brandTransactionIdentifierGet(transactionInfo: string, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BrandRetrieveGet200Response>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.brandTransactionIdentifierGet(transactionInfo, options);
             const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
-            const localVarOperationServerBasePath = operationServerMap['DefaultApi.brandTransactionIdentifierGet']?.[localVarOperationServerIndex]?.url;
+            const localVarOperationServerBasePath = operationServerMap['BrandDevApi.brandTransactionIdentifierGet']?.[localVarOperationServerIndex]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
 
 /**
- * DefaultApi - factory interface
+ * BrandDevApi - factory interface
  * @export
  */
-export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
-    const localVarFp = DefaultApiFp(configuration)
+export const BrandDevApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
+    const localVarFp = BrandDevApiFp(configuration)
     return {
         /**
          * Endpoint to classify any brand into a 2022 NAICS code.
          * @summary Retrieve NAICS code for any brand
-         * @param {DefaultApiBrandNaicsGetRequest} requestParameters Request parameters.
+         * @param {BrandDevApiBrandNaicsGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        brandNaicsGet(requestParameters: DefaultApiBrandNaicsGetRequest, options?: RawAxiosRequestConfig): AxiosPromise<BrandNaicsGet200Response> {
+        brandNaicsGet(requestParameters: BrandDevApiBrandNaicsGetRequest, options?: RawAxiosRequestConfig): AxiosPromise<BrandNaicsGet200Response> {
             return localVarFp.brandNaicsGet(requestParameters.input, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @summary Retrieve brand data by domain
-         * @param {DefaultApiBrandRetrieveGetRequest} requestParameters Request parameters.
+         * @param {BrandDevApiBrandRetrieveGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        brandRetrieveGet(requestParameters: DefaultApiBrandRetrieveGetRequest, options?: RawAxiosRequestConfig): AxiosPromise<BrandRetrieveGet200Response> {
+        brandRetrieveGet(requestParameters: BrandDevApiBrandRetrieveGetRequest, options?: RawAxiosRequestConfig): AxiosPromise<BrandRetrieveGet200Response> {
             return localVarFp.brandRetrieveGet(requestParameters.domain, options).then((request) => request(axios, basePath));
         },
         /**
          * 
          * @summary Search brands by query
-         * @param {DefaultApiBrandSearchGetRequest} requestParameters Request parameters.
+         * @param {BrandDevApiBrandSearchGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        brandSearchGet(requestParameters: DefaultApiBrandSearchGetRequest, options?: RawAxiosRequestConfig): AxiosPromise<BrandSearchGet200Response> {
+        brandSearchGet(requestParameters: BrandDevApiBrandSearchGetRequest, options?: RawAxiosRequestConfig): AxiosPromise<BrandSearchGet200Response> {
             return localVarFp.brandSearchGet(requestParameters.query, options).then((request) => request(axios, basePath));
         },
         /**
          * Endpoint specially designed for platforms that want to identify transaction data by the transaction title.
          * @summary Identify brand from transaction data
-         * @param {DefaultApiBrandTransactionIdentifierGetRequest} requestParameters Request parameters.
+         * @param {BrandDevApiBrandTransactionIdentifierGetRequest} requestParameters Request parameters.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        brandTransactionIdentifierGet(requestParameters: DefaultApiBrandTransactionIdentifierGetRequest, options?: RawAxiosRequestConfig): AxiosPromise<BrandRetrieveGet200Response> {
+        brandTransactionIdentifierGet(requestParameters: BrandDevApiBrandTransactionIdentifierGetRequest, options?: RawAxiosRequestConfig): AxiosPromise<BrandRetrieveGet200Response> {
             return localVarFp.brandTransactionIdentifierGet(requestParameters.transactionInfo, options).then((request) => request(axios, basePath));
         },
     };
 };
 
 /**
- * Request parameters for brandNaicsGet operation in DefaultApi.
+ * Request parameters for brandNaicsGet operation in BrandDevApi.
  * @export
- * @interface DefaultApiBrandNaicsGetRequest
+ * @interface BrandDevApiBrandNaicsGetRequest
  */
-export interface DefaultApiBrandNaicsGetRequest {
+export interface BrandDevApiBrandNaicsGetRequest {
     /**
      * Brand domain or title to retrieve NAICS code for. If a valid domain is provided in &#x60;input&#x60;, it will be used for classification, otherwise, we will search for the brand using the provided title.
      * @type {string}
-     * @memberof DefaultApiBrandNaicsGet
+     * @memberof BrandDevApiBrandNaicsGet
      */
     readonly input: string
 }
 
 /**
- * Request parameters for brandRetrieveGet operation in DefaultApi.
+ * Request parameters for brandRetrieveGet operation in BrandDevApi.
  * @export
- * @interface DefaultApiBrandRetrieveGetRequest
+ * @interface BrandDevApiBrandRetrieveGetRequest
  */
-export interface DefaultApiBrandRetrieveGetRequest {
+export interface BrandDevApiBrandRetrieveGetRequest {
     /**
      * Domain name to retrieve brand data for
      * @type {string}
-     * @memberof DefaultApiBrandRetrieveGet
+     * @memberof BrandDevApiBrandRetrieveGet
      */
     readonly domain: string
 }
 
 /**
- * Request parameters for brandSearchGet operation in DefaultApi.
+ * Request parameters for brandSearchGet operation in BrandDevApi.
  * @export
- * @interface DefaultApiBrandSearchGetRequest
+ * @interface BrandDevApiBrandSearchGetRequest
  */
-export interface DefaultApiBrandSearchGetRequest {
+export interface BrandDevApiBrandSearchGetRequest {
     /**
      * Query string to search brands
      * @type {string}
-     * @memberof DefaultApiBrandSearchGet
+     * @memberof BrandDevApiBrandSearchGet
      */
     readonly query: string
 }
 
 /**
- * Request parameters for brandTransactionIdentifierGet operation in DefaultApi.
+ * Request parameters for brandTransactionIdentifierGet operation in BrandDevApi.
  * @export
- * @interface DefaultApiBrandTransactionIdentifierGetRequest
+ * @interface BrandDevApiBrandTransactionIdentifierGetRequest
  */
-export interface DefaultApiBrandTransactionIdentifierGetRequest {
+export interface BrandDevApiBrandTransactionIdentifierGetRequest {
     /**
      * Transaction information to identify the brand
      * @type {string}
-     * @memberof DefaultApiBrandTransactionIdentifierGet
+     * @memberof BrandDevApiBrandTransactionIdentifierGet
      */
     readonly transactionInfo: string
 }
 
 /**
- * DefaultApi - object-oriented interface
+ * BrandDevApi - object-oriented interface
  * @export
- * @class DefaultApi
+ * @class BrandDevApi
  * @extends {BaseAPI}
  */
-export class DefaultApi extends BaseAPI {
+export class BrandDevApi extends BaseAPI {
     /**
      * Endpoint to classify any brand into a 2022 NAICS code.
      * @summary Retrieve NAICS code for any brand
-     * @param {DefaultApiBrandNaicsGetRequest} requestParameters Request parameters.
+     * @param {BrandDevApiBrandNaicsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DefaultApi
+     * @memberof BrandDevApi
      */
-    public brandNaicsGet(requestParameters: DefaultApiBrandNaicsGetRequest, options?: RawAxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).brandNaicsGet(requestParameters.input, options).then((request) => request(this.axios, this.basePath));
+    public brandNaicsGet(requestParameters: BrandDevApiBrandNaicsGetRequest, options?: RawAxiosRequestConfig) {
+        return BrandDevApiFp(this.configuration).brandNaicsGet(requestParameters.input, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @summary Retrieve brand data by domain
-     * @param {DefaultApiBrandRetrieveGetRequest} requestParameters Request parameters.
+     * @param {BrandDevApiBrandRetrieveGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DefaultApi
+     * @memberof BrandDevApi
      */
-    public brandRetrieveGet(requestParameters: DefaultApiBrandRetrieveGetRequest, options?: RawAxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).brandRetrieveGet(requestParameters.domain, options).then((request) => request(this.axios, this.basePath));
+    public brandRetrieveGet(requestParameters: BrandDevApiBrandRetrieveGetRequest, options?: RawAxiosRequestConfig) {
+        return BrandDevApiFp(this.configuration).brandRetrieveGet(requestParameters.domain, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * 
      * @summary Search brands by query
-     * @param {DefaultApiBrandSearchGetRequest} requestParameters Request parameters.
+     * @param {BrandDevApiBrandSearchGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DefaultApi
+     * @memberof BrandDevApi
      */
-    public brandSearchGet(requestParameters: DefaultApiBrandSearchGetRequest, options?: RawAxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).brandSearchGet(requestParameters.query, options).then((request) => request(this.axios, this.basePath));
+    public brandSearchGet(requestParameters: BrandDevApiBrandSearchGetRequest, options?: RawAxiosRequestConfig) {
+        return BrandDevApiFp(this.configuration).brandSearchGet(requestParameters.query, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
      * Endpoint specially designed for platforms that want to identify transaction data by the transaction title.
      * @summary Identify brand from transaction data
-     * @param {DefaultApiBrandTransactionIdentifierGetRequest} requestParameters Request parameters.
+     * @param {BrandDevApiBrandTransactionIdentifierGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
-     * @memberof DefaultApi
+     * @memberof BrandDevApi
      */
-    public brandTransactionIdentifierGet(requestParameters: DefaultApiBrandTransactionIdentifierGetRequest, options?: RawAxiosRequestConfig) {
-        return DefaultApiFp(this.configuration).brandTransactionIdentifierGet(requestParameters.transactionInfo, options).then((request) => request(this.axios, this.basePath));
+    public brandTransactionIdentifierGet(requestParameters: BrandDevApiBrandTransactionIdentifierGetRequest, options?: RawAxiosRequestConfig) {
+        return BrandDevApiFp(this.configuration).brandTransactionIdentifierGet(requestParameters.transactionInfo, options).then((request) => request(this.axios, this.basePath));
     }
 }
 

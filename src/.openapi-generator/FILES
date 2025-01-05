@@ -1,7 +1,7 @@
 .gitignore
 .npmignore
 api.ts
-api/default-api.ts
+api/brand-dev-api.ts
 base.ts
 git_push.sh
 index.ts

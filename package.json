@@ -1,6 +1,6 @@
 {
   "name": "@branddev/typescript-sdk",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Brand.dev's Node SDK",
   "main": "dist/api.js",
   "types": "dist/api.d.ts",
