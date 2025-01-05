@@ -2,7 +2,7 @@
 
 Welcome to the official Brand.dev API SDK for TypeScript!
 
-The Brand.dev SDK provides a simple way to interact with the Brand.dev API to manage your brand assets and resources programmatically. Use this SDK to fetch brand data such as logos, colors, backdrops, descriptions, social media links, and more.
+The Brand.dev SDK provides a simple way to interact with the Brand.dev API to fetch your brand data programmatically. Use this SDK to fetch brand data such as logos, colors, backdrops, descriptions, social media links, and more.
 
 ## Quick Start
 
