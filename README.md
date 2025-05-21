@@ -1,5 +1,7 @@
 # Brand.dev API SDK
 
+NOTE: PLEASE MOVE TO THE NEW AND IMPROVED SDK: https://www.npmjs.com/package/brand.dev
+
 Welcome to the official Brand.dev API SDK for TypeScript!
 
 The Brand.dev SDK provides a simple way to interact with the Brand.dev API to fetch your brand data programmatically. Use this SDK to fetch brand data such as logos, colors, backdrops, descriptions, social media links, and more.
